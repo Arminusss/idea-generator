@@ -46,6 +46,35 @@ document.getElementById('generateIdeaBtn').addEventListener('click', () => {
     }
 });
 
+// Add event listener to the button to add a new idea when clicked
+document.getElementById('addIdeaBtn').addEventListener('click', () => {
+    const newIdeaInput = document.getElementById('newIdeaInput');
+    const newIdea = newIdeaInput.value.trim();
+    const newIndoorCheckbox = document.getElementById('newIndoorCheckbox').checked;
+    const newOutdoorCheckbox = document.getElementById('newOutdoorCheckbox').checked;
+
+    if (newIdea) {
+        const ideaExists = indoorIdeas.includes(newIdea) || outdoorIdeas.includes(newIdea);
+        if (ideaExists) {
+            alert("This idea already exists in the list.");
+        } else {
+            if (newIndoorCheckbox) {
+                indoorIdeas.push(newIdea);
+            }
+            if (newOutdoorCheckbox) {
+                outdoorIdeas.push(newIdea);
+            }
+            if (!newIndoorCheckbox && !newOutdoorCheckbox) {
+                alert("Please select either Indoor or Outdoor for the new idea.");
+            } else {
+                newIdeaInput.value = ''; // Clear the input field after adding the idea
+            }
+        }
+    } else {
+        alert("Please enter a valid idea.");
+    }
+});
+
 // Function to generate a random hex color code
 function getRandomColor() {
     const letters = '0123456789ABCDEF';
