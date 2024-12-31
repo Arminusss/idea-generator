@@ -1,0 +1,68 @@
+/* styles.css */
+
+/* Style the body to center the content and set background gradient */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Allow for the footer to be placed at the bottom */
+    justify-content: center; /* Center the container vertically */
+    align-items: center; /* Center the container horizontally */
+    height: 100vh;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    margin: 0;
+}
+
+/* Style the main container with new background color, padding, and shadow */
+.container {
+    text-align: center;
+    background-color: #ffe5d9; /* New pastel background color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s; /* Fade-in animation */
+}
+
+/* Style the checkbox group */
+.checkbox-group {
+    margin-bottom: 20px;
+}
+
+/* Style the button with padding, color, and hover effect */
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Transition for hover effect */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue when hovering over the button */
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+/* Style the idea container with increased font size and bold text */
+#ideaContainer {
+    margin-top: 20px;
+    font-size: 28px; /* Increased font size */
+    color: #333;
+    font-weight: bold; /* Bold text for better visibility */
+    animation: fadeIn 1s; /* Fade-in animation */
+    transition: opacity 0.5s ease-in-out, color 0.5s ease-in-out; /* Transition for opacity and color */
+    opacity: 0; /* Initially set to 0 to create fade-in effect */
+}
+
+/* Style the footer with transparent background and text alignment */
+footer {
+    background-color: transparent; /* Transparent background */
+    text-align: center;
+    width: 100%;
+    box-shadow: none; /* Remove shadow */
+    animation: fadeIn 2s; /* Fade-in animation */
+    position: fixed; /* Fixed position */
+    bottom: 0; /* Align to bottom */
+    padding: 10px 0; /* Padding to adjust height */
+}
