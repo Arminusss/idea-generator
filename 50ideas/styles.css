@@ -27,6 +27,41 @@ body {
     margin-bottom: 20px;
 }
 
+/* Style the add idea section */
+.add-idea-section {
+    margin-top: 20px;
+}
+
+.add-idea-section input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 60%;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.add-idea-section label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.add-idea-section button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Transition for hover effect */
+}
+
+.add-idea-section button:hover {
+    background-color: #0056b3; /* Darker blue when hovering over the button */
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
 /* Style the button with padding, color, and hover effect */
 button {
     padding: 15px 30px;
